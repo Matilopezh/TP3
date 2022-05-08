@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+using namespace std; 
 class cOrgano
 {
 
@@ -6,7 +9,7 @@ public:
 	virtual ~cOrgano();
 
 private:
-	String fecha_ablacion;
-	String Tipo;
+	string fecha_ablacion;
+	string Tipo;
 
 };

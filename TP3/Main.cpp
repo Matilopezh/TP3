@@ -1,4 +1,6 @@
 #include <iostream>
+#include "cIncucai.h"
+
 using namespace std;
 
 int main() {

@@ -1,4 +1,6 @@
-
+#include <iostream>
+#include <string>
+using namespace std;
 
 class cCentro
 {
@@ -12,12 +14,12 @@ public:
 	void transplante();
 
 private:
-	cLista_vehiculos cLista_vehiculos*;
-	String Direccion;
-	String Nombre;
-	String Partido;
-	String Provincia;
-	String Telefono;
+	cLista_vehiculos* cLista_vehiculos;
+	string Direccion;
+	string Nombre;
+	string Partido;
+	string Provincia;
+	string Telefono;
 
 };
 

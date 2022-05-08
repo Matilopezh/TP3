@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+using namespace std; 
 #include "cPaciente.h"
 #include "cOrgano.h"
 
@@ -7,11 +10,10 @@ class cDonante : public cPaciente
 public:
 	cDonante();
 	virtual ~cDonante();
-	cOrgano *m_cOrgano;
 
 private:
-	cLista_org cLista_org*;
-	String fecha_hora_ablacion;
-	String fecha_hora_muerte;
+	cLista_org* cLista_org;
+	string fecha_hora_ablacion;
+	string fecha_hora_muerte;
 
 };

@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+using namespace std; 
 #include "cPaciente.h"
 
 class cIncucai
@@ -13,8 +16,8 @@ public:
 	bool trasporte_transplante();
 
 private:
-	cLista_pacientes cLista_pacientes*;
-	cPaciente cPaciente*;
+	cLista_pacientes* cLista_pacientes;
+	cPaciente* cPaciente;
 
 };
 

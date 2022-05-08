@@ -1,4 +1,8 @@
 #include "cCentro.h"
+#include <iostream>
+#include <string>
+using namespace std; 
+
 
 class cPaciente
 {
@@ -6,14 +10,14 @@ class cPaciente
 public:
 	cPaciente();
 	virtual ~cPaciente();
-	cCentro *m_cCentro;
+	
 
 private:
-	cPaciente cCentro*;
-	String Fecha_nacimiento;
-	String Nombre;
-	booleano Sexo;
-	String Telefono;
-	String Tipo_sangre;
+	cCentro* cCentro;
+	string Fecha_nacimiento;
+	string Nombre;
+	bool Sexo;
+	string Telefono;
+	string Tipo_sangre;
 
 };
