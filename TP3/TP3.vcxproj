@@ -139,7 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cCentro.cpp" />
+    <ClCompile Include="cDonante.cpp" />
+    <ClCompile Include="cIncucai.cpp" />
+    <ClCompile Include="cOrgano.cpp" />
+    <ClCompile Include="cPaciente.cpp" />
+    <ClCompile Include="cReceptor.cpp" />
     <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cCentro.h" />
+    <ClInclude Include="cDonante.h" />
+    <ClInclude Include="cIncucai.h" />
+    <ClInclude Include="cOrgano.h" />
+    <ClInclude Include="cPaciente.h" />
+    <ClInclude Include="cReceptor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
