@@ -9,10 +9,11 @@ class cPaciente
 
 public:
 	cPaciente();
+	 cPaciente(string _Nombre, bool _Sexo, string _Fecha_nacimiento, string _Telefono, string _Tipo_sangre);
 	virtual ~cPaciente();
 	
 
-private:
+protected:
 	cCentro* cCentro;
 	string Fecha_nacimiento;
 	string Nombre;

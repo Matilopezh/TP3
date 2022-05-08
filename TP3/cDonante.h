@@ -8,11 +8,11 @@ class cDonante : public cPaciente
 {
 
 public:
-	cDonante();
+	cDonante(string _fecha_hora_ablacion, string _fecha_hora_muerte);
 	virtual ~cDonante();
 
 private:
-	cLista_org* cLista_org;
+	//cLista_org* cLista_org;
 	string fecha_hora_ablacion;
 	string fecha_hora_muerte;
 

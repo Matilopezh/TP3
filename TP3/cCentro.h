@@ -14,7 +14,7 @@ public:
 	void transplante();
 
 private:
-	cLista_vehiculos* cLista_vehiculos;
+	//cLista_vehiculos* cLista_vehiculos;
 	string Direccion;
 	string Nombre;
 	string Partido;

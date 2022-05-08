@@ -15,7 +15,7 @@ public:
 	bool trasporte_transplante();
 
 private:
-	cLista_pacientes* cLista_pacientes;
+	//cLista_pacientes* cLista_pacientes;
 	cPaciente* cPaciente;
 
 };

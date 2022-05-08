@@ -8,7 +8,7 @@ class cReceptor : public cPaciente
 {
 
 public:
-	cReceptor();
+	cReceptor(string _Estado, string _fecha_espera, string _Patologia, int _Prioridad);
 	virtual ~cReceptor();
 	
 
