@@ -8,14 +8,14 @@ class cReceptor : public cPaciente
 {
 
 public:
-	cReceptor(string _Estado, string _fecha_espera, string _Patologia, int _Prioridad);
+	cReceptor(string _Estado, string _Fecha_espera, string _Patologia, int _Prioridad, cOrgano& Organo);
 	virtual ~cReceptor();
 	
 
 private:
-	cOrgano* cOrgano;
+	cOrgano* Organo;
 	string Estado;
-	string fecha_espera;
+	string Fecha_espera;
 	string Patologia;
 	int Prioridad;
 
