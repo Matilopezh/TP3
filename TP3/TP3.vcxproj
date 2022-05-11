@@ -145,6 +145,7 @@
     <ClCompile Include="cOrgano.cpp" />
     <ClCompile Include="cPaciente.cpp" />
     <ClCompile Include="cReceptor.cpp" />
+    <ClCompile Include="lista.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="cOrgano.h" />
     <ClInclude Include="cPaciente.h" />
     <ClInclude Include="cReceptor.h" />
+    <ClInclude Include="lista.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
