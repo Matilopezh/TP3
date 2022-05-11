@@ -41,7 +41,9 @@ void cCentro::transplante() {
 	realizar el trasplante.Si el trasplante falla, se cambia la prioridad del paciente receptor a
 	la mayor prioridad y se setea su estado a inestable. Si el trasplante es exitoso o no se
 	define con un random equiprobable.*/
-	int exito = rand() % 1;
-	cout << exito << endl;
+	int exito = rand() % 2;
+	if (exito) {//equiprobabilidad de que salga tanto 0(false) como 1(true)
+
+	}
 
 }
