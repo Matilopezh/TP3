@@ -12,7 +12,7 @@ class cCentro
 		cCentro(string _Direccion, string _Nombre, string _Partido, string _Provincia, unsigned int _Telefono);
 		virtual ~cCentro();
 
-		bool ablacion();
+		bool ablacion(cDonante* Donante);
 		bool asignar_vehiculos(cReceptor* Receptor, cDonante* Donante);
 		void transplante();
 

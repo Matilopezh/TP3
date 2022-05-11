@@ -18,6 +18,6 @@ private:
 	string Fecha_espera;
 	string Patologia;
 	int Prioridad;
-
+	
 };
 
