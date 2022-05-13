@@ -10,6 +10,6 @@ public:
 
 private:
 	string fecha_ablacion;
-	string Tipo;
-
+	enum Tipo { CORAZON, RINION, PULMON, HIGADO, PANCREAS, HUESO, INTESTINO, PIEL, CORNEAS };
+	friend class cIncucai;
 };

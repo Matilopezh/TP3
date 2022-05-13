@@ -1,19 +1,23 @@
 #include <iostream>
 #include <string>
+#include "lista.h"
 using namespace std; 
 #include "cPaciente.h"
 #include "cOrgano.h"
 
+
+
 class cDonante : public cPaciente
 {
-
+	friend class cCentro;
 public:
-	cDonante(string _fecha_hora_ablacion, string _fecha_hora_muerte);
+	cDonante(string _Nombre, string _Sexo, string _Fecha_nacimiento, string _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud, int _fecha_hora_muerte);
 	virtual ~cDonante();
+	cLista<cOrgano>GetListaOrgano();//revisar
 
 private:
-	//cLista_org* cLista_org;
-	string fecha_hora_ablacion;
-	string fecha_hora_muerte;
-
+	cLista<cOrgano>* listaorganos;
+	int fecha_hora_ablacion;
+	int fecha_hora_muerte;
+	
 };
