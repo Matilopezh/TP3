@@ -139,22 +139,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cAmbulancia.cpp" />
+    <ClCompile Include="cAvion.cpp" />
     <ClCompile Include="cCentro.cpp" />
     <ClCompile Include="cDonante.cpp" />
+    <ClCompile Include="cHelicoptero.cpp" />
     <ClCompile Include="cIncucai.cpp" />
     <ClCompile Include="cOrgano.cpp" />
     <ClCompile Include="cPaciente.cpp" />
     <ClCompile Include="cReceptor.cpp" />
+    <ClCompile Include="cVehiculo.cpp" />
     <ClCompile Include="lista.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cAmbulancia.h" />
+    <ClInclude Include="cAvion.h" />
     <ClInclude Include="cCentro.h" />
     <ClInclude Include="cDonante.h" />
+    <ClInclude Include="cHelicoptero.h" />
     <ClInclude Include="cIncucai.h" />
     <ClInclude Include="cOrgano.h" />
     <ClInclude Include="cPaciente.h" />
     <ClInclude Include="cReceptor.h" />
+    <ClInclude Include="cVehiculo.h" />
     <ClInclude Include="lista.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
