@@ -57,35 +57,35 @@ void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 1) && ((_donante->listaorganos->lista[i]->tipo_organo) == 1))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Rinion) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 2) && ((_donante->listaorganos->lista[i]->tipo_organo) == 2))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Pulmones) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 3) && ((_donante->listaorganos->lista[i]->tipo_organo) == 3))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Higado) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 4) && ((_donante->listaorganos->lista[i]->tipo_organo) == 4))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Pancreas) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 5) && ((_donante->listaorganos->lista[i]->tipo_organo) == 5))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Huesos) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 6) && ((_donante->listaorganos->lista[i]->tipo_organo) == 6))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Intestino) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 7) && ((_donante->listaorganos->lista[i]->tipo_organo) == 7))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Piel) + (ListaReceptor->lista[j]);
 				}
 				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 8) && ((_donante->listaorganos->lista[i]->tipo_organo) == 8))
 				{
-					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+					(*SubListaReceptores_Corneas) + (ListaReceptor->lista[j]);
 				}
 			}
 	

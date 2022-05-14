@@ -1,12 +1,8 @@
-///////////////////////////////////////////////////////////
-//  cHelicoptero.cpp
-//  Implementation of the Class cHelicoptero
-//  Created on:      14-may.-2022 15:03:59
-//  Original author: paris
-///////////////////////////////////////////////////////////
 
 #include "cHelicoptero.h"
-
+#include <iostream>
+#include <string>
+#include <sstream>
 
 cHelicoptero::cHelicoptero(){
 
@@ -19,15 +15,18 @@ cHelicoptero::~cHelicoptero(){
 }
 
 
-
-
-
-void cHelicoptero::Imprimir(){
-
+void cHelicoptero::Imprimir() {
+	cout << to_String() << endl;
 }
 
+string cHelicoptero::to_String() {
+	stringstream ss;
+	ss << "taca taca taca " << endl;
+	ss << "“El Helicoptero llegó a destino " << endl;
+	return ss.str();
+}
 
-bool cHelicoptero::Transporte(cOrgano Organo, cCentro Centro){
+bool cHelicoptero::Transporte(cOrgano* Organo, cCentro* Centro){
 
 	return false;
 }

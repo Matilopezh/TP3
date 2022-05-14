@@ -1,16 +1,16 @@
 #include "cCentro.h"
-#include "cOrgano.h"
 #include <iostream>
 #include <string>
 using namespace std;
+class cOrgano;
 class cVehiculo
 {
 
 public:
 	cVehiculo();
 	virtual ~cVehiculo();
-
-	virtual void Imprimir();
-	virtual bool Transporte()=0;
+	virtual string to_String()=0;
+	virtual void Imprimir()=0;
+	virtual bool Transporte(cOrgano* Organo, cCentro* Centro)=0;
 
 };

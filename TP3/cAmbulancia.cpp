@@ -1,33 +1,29 @@
-///////////////////////////////////////////////////////////
-//  cAmbulancia.cpp
-//  Implementation of the Class cAmbulancia
-//  Created on:      14-may.-2022 14:59:03
-//  Original author: paris
-///////////////////////////////////////////////////////////
-
+#include <iostream>
 #include "cAmbulancia.h"
-
+#include <string>
+#include <sstream>
 
 cAmbulancia::cAmbulancia(){
 
 }
-
-
 
 cAmbulancia::~cAmbulancia(){
 
 }
 
 
-
-
-
 void cAmbulancia::Imprimir(){
-
+	cout << to_String() << endl;
 }
 
+string cAmbulancia::to_String() {
+	stringstream ss;
+	ss << "“iuiuiuiuiu "  << endl; 
+	ss << "“La ambulancia llego  a destino" << endl;
+	return ss.str();
+}
 
-bool cAmbulancia::Transporte(cOrgano Organo, cCentro Centro){
+bool cAmbulancia::Transporte(cOrgano* Organo, cCentro* Centro){
 
 	return false;
 }

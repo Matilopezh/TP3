@@ -1,12 +1,8 @@
-///////////////////////////////////////////////////////////
-//  cAvion.cpp
-//  Implementation of the Class cAvion
-//  Created on:      14-may.-2022 14:59:04
-//  Original author: paris
-///////////////////////////////////////////////////////////
 
 #include "cAvion.h"
-
+#include <iostream>
+#include <string>
+#include <sstream>
 
 cAvion::cAvion(){
 
@@ -19,40 +15,25 @@ cAvion::~cAvion(){
 }
 
 
-
-
-
-void cAvion::Imprimir(){
-
+void cAvion::Imprimir() {
+	cout << to_String() << endl;
 }
 
+string cAvion::to_String() {
+	stringstream ss;
+	ss << "zhooooooom " << endl;
+	ss << "“El avión llegó a destino " << endl;
+	return ss.str();
+}
 
-bool cAvion::Transporte(cOrgano Organo, cCentro Centro){
+bool cAvion::Transporte(cOrgano* Organo, cCentro* Centro){
 
 	return false;
 }
 
 
-cHelicoptero::cHelicoptero(){
-
-}
-
-
-
-cHelicoptero::~cHelicoptero(){
-
-}
 
 
 
 
 
-void cHelicoptero::Imprimir(){
-
-}
-
-
-bool cHelicoptero::Transporte(cOrgano Organo, cCentro Centro){
-
-	return false;
-}
