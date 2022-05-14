@@ -7,6 +7,7 @@ private:
 	int ca;
 	int tam;
 	t** lista;
+	friend class cIncucai;
 public:
 	cLista( int _tam);
 	~cLista();

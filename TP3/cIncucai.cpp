@@ -23,9 +23,10 @@ cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas
 
 
 
-cPaciente* cIncucai::elegir_receptor(cLista<cReceptor, cOrgano>* _SubListaReceptores_Corazon){
+cPaciente* cIncucai::elegir_receptor(){
 
 	//SubListaReceptores_Corazon->
+	
 }
 
 
@@ -43,43 +44,51 @@ bool cIncucai::recibir_paciente(cPaciente* _paciente){
 	}
 }
 
-cLista<cReceptor, cOrgano>* cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
+void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
 {
-	
-	cLista<cOrgano>* aux = &_donante->GetListaOrgano();
-	
-	for (int i = 0; i < aux->GetTam(); i++) {
+	      
+	for (int i = 0; i < _donante->listaorganos->ca; i++) {
 
-		switch (_donante->listaorganos->lista[i]->tipo_organo) {
-		case 0: //CORAZON
 			for (int j = 0; j < ListaReceptor->GetTam(); j++)
-			{
-				ListaReceptor->lista[j]->Organo->tipo_organo;
-				if ((ListaReceptor->lista[j]->Organo->tipo_organo) == 0)
+			{	
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 0) && ((_donante->listaorganos->lista[i]->tipo_organo)==0))
 				{
 					(*SubListaReceptores_Corazon)+(ListaReceptor->lista[j]);
 				}
-				return SubListaReceptores_Corazon;
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 1) && ((_donante->listaorganos->lista[i]->tipo_organo) == 1))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 2) && ((_donante->listaorganos->lista[i]->tipo_organo) == 2))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 3) && ((_donante->listaorganos->lista[i]->tipo_organo) == 3))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 4) && ((_donante->listaorganos->lista[i]->tipo_organo) == 4))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 5) && ((_donante->listaorganos->lista[i]->tipo_organo) == 5))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 6) && ((_donante->listaorganos->lista[i]->tipo_organo) == 6))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 7) && ((_donante->listaorganos->lista[i]->tipo_organo) == 7))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
+				if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 8) && ((_donante->listaorganos->lista[i]->tipo_organo) == 8))
+				{
+					(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
+				}
 			}
-				break;
-		case 1://RINION
-			break;
-		case 2://PULMON
-			break;
-		case 3://HIGADO
-			break;
-		case 4://PANCREAS
-			break;
-		case 5://HUESO
-			break;
-		case 6://INTESTINO
-			break;
-		case 6://PIEL
-			break;
-		case 6://CORNEAS
-			break;
-
-		}
+	
 	}
 
 		

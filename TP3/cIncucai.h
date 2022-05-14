@@ -15,11 +15,12 @@ public:
 	cIncucai();
 	virtual ~cIncucai();
 	
-	cPaciente* elegir_receptor(cLista<cReceptor>* _SubListaReceptores_Corazon);
+	
 	bool recibir_paciente(cPaciente*_paciente);
 	bool trasporte_transplante(cDonante* _donante);
 	bool ingresar_paciente(cPaciente* _paciente);
-	cLista<cReceptor, cOrgano>* Buscar_Posibles_Receptores(cDonante* _donante);
+	void Buscar_Posibles_Receptores(cDonante* _donante);
+	cPaciente* elegir_receptor();
 	
 private:
 	
@@ -28,8 +29,13 @@ private:
 	cLista<cDonante>* ListaDonante;
 	cLista<cReceptor>* ListaReceptor;
 	cLista<cReceptor>* SubListaReceptores_Corazon;
-
-
-
+	cLista<cReceptor>* SubListaReceptores_Rinion;
+	cLista<cReceptor>* SubListaReceptores_Higado;
+	cLista<cReceptor>* SubListaReceptores_Pancreas;
+	cLista<cReceptor>* SubListaReceptores_Huesos;
+	cLista<cReceptor>* SubListaReceptores_Corneas;
+	cLista<cReceptor>* SubListaReceptores_Pulmones;
+	cLista<cReceptor>* SubListaReceptores_Intestino;
+	cLista<cReceptor>* SubListaReceptores_Piel;
 };
 
