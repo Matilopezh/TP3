@@ -23,9 +23,9 @@ cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas
 
 
 
-cPaciente* cIncucai::elegir_receptor(cPaciente* _paciente){
+cPaciente* cIncucai::elegir_receptor(cLista<cReceptor, cOrgano>* _SubListaReceptores_Corazon){
 
-	return  NULL;
+	//SubListaReceptores_Corazon->
 }
 
 
@@ -39,16 +39,49 @@ bool cIncucai::recibir_paciente(cPaciente* _paciente){
 		Buscar_Posibles_Receptores(Donante_Aux);
 	}
 	else {
-		ListaReceptor->operator+(Receptor_Aux);
+		(*ListaReceptor)+(Receptor_Aux);
 	}
 }
 
-bool cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
+cLista<cReceptor, cOrgano>* cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
 {
 	
-		
-		
-		
+	cLista<cOrgano>* aux = &_donante->GetListaOrgano();
+	
+	for (int i = 0; i < aux->GetTam(); i++) {
+
+		switch (_donante->listaorganos->lista[i]->tipo_organo) {
+		case 0: //CORAZON
+			for (int j = 0; j < ListaReceptor->GetTam(); j++)
+			{
+				ListaReceptor->lista[j]->Organo->tipo_organo;
+				if ((ListaReceptor->lista[j]->Organo->tipo_organo) == 0)
+				{
+					(*SubListaReceptores_Corazon)+(ListaReceptor->lista[j]);
+				}
+				return SubListaReceptores_Corazon;
+			}
+				break;
+		case 1://RINION
+			break;
+		case 2://PULMON
+			break;
+		case 3://HIGADO
+			break;
+		case 4://PANCREAS
+			break;
+		case 5://HUESO
+			break;
+		case 6://INTESTINO
+			break;
+		case 6://PIEL
+			break;
+		case 6://CORNEAS
+			break;
+
+		}
+	}
+
 		
 		
 	

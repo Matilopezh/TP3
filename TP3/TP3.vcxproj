@@ -163,6 +163,7 @@
     <ClInclude Include="cPaciente.h" />
     <ClInclude Include="cReceptor.h" />
     <ClInclude Include="cVehiculo.h" />
+    <ClInclude Include="Enum.h" />
     <ClInclude Include="lista.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

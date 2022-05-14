@@ -4,6 +4,7 @@
 using namespace std; 
 #include "cPaciente.h"
 #include "cOrgano.h"
+#include "Enum.h"
 
 
 
@@ -19,5 +20,5 @@ private:
 	cLista<cOrgano>* listaorganos;
 	int fecha_hora_ablacion;
 	int fecha_hora_muerte;
-	
+	friend class cIncucai;
 };

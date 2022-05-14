@@ -10,13 +10,13 @@ public:
 	cReceptor(string _Nombre, string _Sexo, string _Fecha_nacimiento, string _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud, string _Estado, string _Fecha_espera, string _Patologia, int _Prioridad, cOrgano& Organo);
 	virtual ~cReceptor();
 	string GetEstado();
-
+	cOrgano* GetTipoOrgano();
 private:
 	cOrgano* Organo;
 	string Estado;
 	string Fecha_espera;
 	string Patologia;
 	int Prioridad;
-	
+	friend class cIncucai;
 };
 

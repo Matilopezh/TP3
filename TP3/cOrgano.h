@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "Enum.h"
+
 using namespace std; 
 class cOrgano
 {
@@ -10,6 +12,6 @@ public:
 
 private:
 	string fecha_ablacion;
-	enum Tipo { CORAZON, RINION, PULMON, HIGADO, PANCREAS, HUESO, INTESTINO, PIEL, CORNEAS };
+	Tipo tipo_organo;
 	friend class cIncucai;
 };

@@ -15,3 +15,7 @@ string cReceptor::GetEstado()
 {
 	return Estado;
 }
+cOrgano* cReceptor::GetTipoOrgano()
+{
+	return Organo;
+}
