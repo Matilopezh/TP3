@@ -11,3 +11,7 @@ cReceptor::cReceptor(string _Nombre, string _Sexo, string _Fecha_nacimiento, str
 }
 
 cReceptor::~cReceptor(){}
+string cReceptor::GetEstado()
+{
+	return Estado;
+}

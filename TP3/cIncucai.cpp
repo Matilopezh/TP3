@@ -45,35 +45,13 @@ bool cIncucai::recibir_paciente(cPaciente* _paciente){
 
 bool cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
 {
-	cLista<cOrgano>* aux = &_donante->GetListaOrgano();
-	for (int i = 0; i < aux->GetTam(); i++) {
-		
-		switch (aux.lista[i].Tipo) {
-		case 0: //CORAZON
-			   for(int j=0;i<ListaReceptor.ca;)
-			break;
-		case 1://RINION
-			break;
-		case 2://PULMON
-			break;
-		case 3://HIGADO
-			break;
-		case 4://PANCREAS
-			break;
-		case 5://HUESO
-			break;
-		case 6://INTESTINO
-			break;
-		case 6://PIEL
-			break;
-		case 6://CORNEAS
-			break;
-
+	
 		
 		
 		
-		}
-	}
+		
+		
+	
 }
 
 bool cIncucai::trasporte_transplante(cDonante* _donante){
