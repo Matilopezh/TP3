@@ -20,7 +20,7 @@ public:
 	bool trasporte_transplante(cDonante* _donante);
 	bool ingresar_paciente(cPaciente* _paciente);
 	void Buscar_Posibles_Receptores(cDonante* _donante);
-	cPaciente* elegir_receptor();
+	cPaciente* elegir_receptor (cDonante* _donante);
 	
 private:
 	

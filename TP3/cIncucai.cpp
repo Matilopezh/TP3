@@ -23,9 +23,119 @@ cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas
 
 
 
-cPaciente* cIncucai::elegir_receptor(){
+cPaciente* cIncucai:: elegir_receptor (cDonante* _donante)
+{
+	//algo huele mal aqui
+	if (SubListaReceptores_Corazon != NULL)
+	{
+		cLista<cReceptor>* SubSublistacorazon = nullptr;
+		for (int i = 0; i < SubListaReceptores_Corazon->GetTam(); i++)
+		{
+			if (SubListaReceptores_Corazon->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistacorazon) + (SubListaReceptores_Corazon->lista[i]);
+			}
 
-	//SubListaReceptores_Corazon->
+		}
+	}
+	if (SubListaReceptores_Corneas != NULL)
+	{
+		cLista<cReceptor>* SubSublistaCorneas = nullptr;
+		for (int i = 0; i < SubListaReceptores_Corneas->GetTam(); i++)
+		{
+			if (SubListaReceptores_Corneas->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaCorneas) + (SubListaReceptores_Corneas->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Pulmones != NULL)
+	{
+		cLista<cReceptor>* SubSublistaPulmones = nullptr;
+		for (int i = 0; i < SubListaReceptores_Corazon->GetTam(); i++)
+		{
+			if (SubListaReceptores_Pulmones->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaPulmones) + (SubListaReceptores_Pulmones->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Piel != NULL)
+	{
+		cLista<cReceptor>* SubSublistaPiel = nullptr;
+		for (int i = 0; i < SubListaReceptores_Piel->GetTam(); i++)
+		{
+			if (SubListaReceptores_Piel->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaPiel) + (SubListaReceptores_Piel->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Higado != NULL)
+	{
+		cLista<cReceptor>* SubSublistaHigado = nullptr;
+		for (int i = 0; i < SubListaReceptores_Higado->GetTam(); i++)
+		{
+			if (SubListaReceptores_Higado->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaHigado) + (SubListaReceptores_Higado->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Rinion != NULL)
+	{
+		cLista<cReceptor>* SubSublistaRinion = nullptr;
+		for (int i = 0; i < SubListaReceptores_Rinion->GetTam(); i++)
+		{
+			if (SubListaReceptores_Rinion->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaRinion) + (SubListaReceptores_Rinion->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Pancreas != NULL)
+	{
+		cLista<cReceptor>* SubSublistaPancreas = nullptr;
+		for (int i = 0; i < SubListaReceptores_Pancreas->GetTam(); i++)
+		{
+			if (SubListaReceptores_Pancreas->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaPancreas) + (SubListaReceptores_Pancreas->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Huesos != NULL)
+	{
+		cLista<cReceptor>* SubSublistaHuesos = nullptr;
+		for (int i = 0; i < SubListaReceptores_Huesos->GetTam(); i++)
+		{
+			if (SubListaReceptores_Huesos->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaHuesos) + (SubListaReceptores_Huesos->lista[i]);
+			}
+
+		}
+	}
+	if (SubListaReceptores_Intestino != NULL)
+	{
+		cLista<cReceptor>* SubSublistaIntestino = nullptr;
+		for (int i = 0; i < SubListaReceptores_Intestino->GetTam(); i++)
+		{
+			if (SubListaReceptores_Intestino->lista[i]->Tipo_sangre == _donante->Tipo_sangre)
+			{
+				(*SubSublistaIntestino) + (SubListaReceptores_Intestino->lista[i]);
+			}
+
+		}
+	}
+
+
 	
 }
 
