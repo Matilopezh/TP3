@@ -10,20 +10,29 @@ class cOrgano;
 class cDonante;
 
 cIncucai::cIncucai(){
-	paciente = nullptr;
-	ListaReceptor = nullptr;
-	
+	 paciente = nullptr;
+	 ListaReceptor = nullptr;
+	 ListaDonante;
+     SubListaReceptores_Corazon= nullptr;
+	 SubListaReceptores_Rinion =nullptr;
+	 SubListaReceptores_Higado =nullptr;
+	 SubListaReceptores_Pancreas= nullptr;
+	 SubListaReceptores_Huesos =nullptr;
+	 SubListaReceptores_Corneas= nullptr;
+	 SubListaReceptores_Pulmones= nullptr;
+	 SubListaReceptores_Intestino =nullptr;
+	 SubListaReceptores_Piel= nullptr;
 }
 
 
 
-cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas
+cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas!!!!!!
 
 
 
 
 
-cPaciente* cIncucai:: elegir_receptor (cDonante* _donante)
+cReceptor* cIncucai:: elegir_receptor (cDonante* _donante)
 {
 	//algo huele mal aqui
 	if (SubListaReceptores_Corazon != NULL)
@@ -35,8 +44,25 @@ cPaciente* cIncucai:: elegir_receptor (cDonante* _donante)
 			{
 				(*SubSublistacorazon) + (SubListaReceptores_Corazon->lista[i]);
 			}
-
 		}
+			for (int j = 0; j < SubSublistacorazon->GetTam(); j++)
+			{
+
+				for (int k = 0; k < SubSublistacorazon->GetTam(); k++)
+				{
+
+					cReceptor* aux=nullptr;
+					if (SubSublistacorazon->lista[k]->Prioridad > SubSublistacorazon->lista[k + 1]->Prioridad)
+					{
+						 aux = SubSublistacorazon->lista[k];
+						SubSublistacorazon->lista[k]= SubSublistacorazon->lista[k + 1];//lista ordenada creo
+						SubSublistacorazon->lista[k + 1] = aux;
+						cReceptor* pacienteelegido = SubSublistacorazon->lista[0];
+						return pacienteelegido; //retornamos paciente!!!
+					}
+				}
+			}
+		
 	}
 	if (SubListaReceptores_Corneas != NULL)
 	{
@@ -47,8 +73,25 @@ cPaciente* cIncucai:: elegir_receptor (cDonante* _donante)
 			{
 				(*SubSublistaCorneas) + (SubListaReceptores_Corneas->lista[i]);
 			}
-
 		}
+			for (int j = 0; j < SubSublistaCorneas->GetTam(); j++)
+			{
+
+				for (int k = 0; k < SubSublistaCorneas->GetTam(); j++)
+				{
+
+					cReceptor* aux = nullptr;
+					if (SubSublistaCorneas->lista[k]->Prioridad > SubSublistaCorneas->lista[k + 1]->Prioridad)
+					{
+						aux = SubSublistaCorneas->lista[k];
+						SubSublistaCorneas->lista[k] = SubSublistaCorneas->lista[k + 1];//lista ordenada creo
+						SubSublistaCorneas->lista[k + 1] = aux;
+						cReceptor* pacienteelegido = SubSublistaCorneas->lista[0];
+						return pacienteelegido; //retornamos paciente!!!
+					}
+				}
+
+		
 	}
 	if (SubListaReceptores_Pulmones != NULL)
 	{
@@ -59,7 +102,7 @@ cPaciente* cIncucai:: elegir_receptor (cDonante* _donante)
 			{
 				(*SubSublistaPulmones) + (SubListaReceptores_Pulmones->lista[i]);
 			}
-
+			
 		}
 	}
 	if (SubListaReceptores_Piel != NULL)
@@ -140,7 +183,7 @@ cPaciente* cIncucai:: elegir_receptor (cDonante* _donante)
 }
 
 
-bool cIncucai::recibir_paciente(cPaciente* _paciente){
+void cIncucai::recibir_paciente(cPaciente* _paciente) {
 	cDonante* Donante_Aux = nullptr;
 	Donante_Aux = dynamic_cast<cDonante*>(_paciente);
 	cReceptor* Receptor_Aux = nullptr;
@@ -149,7 +192,8 @@ bool cIncucai::recibir_paciente(cPaciente* _paciente){
 		(*ListaDonante)+(Donante_Aux);
 		Buscar_Posibles_Receptores(Donante_Aux);
 	}
-	else {
+	else 
+	{
 		(*ListaReceptor)+(Receptor_Aux);
 	}
 }

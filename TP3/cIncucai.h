@@ -16,11 +16,11 @@ public:
 	virtual ~cIncucai();
 	
 	
-	bool recibir_paciente(cPaciente*_paciente);
+	void recibir_paciente(cPaciente*_paciente);
 	bool trasporte_transplante(cDonante* _donante);
 	bool ingresar_paciente(cPaciente* _paciente);
 	void Buscar_Posibles_Receptores(cDonante* _donante);
-	cPaciente* elegir_receptor (cDonante* _donante);
+	cReceptor* elegir_receptor (cDonante* _donante);
 	
 private:
 	
