@@ -6,19 +6,19 @@ using namespace std;
 #include "cOrgano.h"
 #include "Enum.h"
 
-
+class cFecha;
 
 class cDonante : public cPaciente
 {
 	friend class cCentro;
 public:
-	cDonante(string _Nombre, string _Sexo, string _Fecha_nacimiento, string _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud, int _fecha_hora_muerte);
+	cDonante(string _Nombre, string _Sexo, cFecha& _Fecha_nacimiento, string _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud, cFecha& _fecha_hora_muerte);
 	virtual ~cDonante();
 	cLista<cOrgano>GetListaOrgano();//revisar
 
 private:
 	cLista<cOrgano>* listaorganos;
-	int fecha_hora_ablacion;
-	int fecha_hora_muerte;
+	cFecha* fecha_hora_ablacion;
+	cFecha* fecha_hora_muerte;
 	friend class cIncucai;
 };

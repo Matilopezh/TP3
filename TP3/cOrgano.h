@@ -11,7 +11,7 @@ public:
 	virtual ~cOrgano();
 
 private:
-	string fecha_ablacion;
+	cFecha* fecha_ablacion;
 	Tipo tipo_organo;
 	friend class cIncucai;
 };
