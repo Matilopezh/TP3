@@ -143,6 +143,7 @@
     <ClCompile Include="cAvion.cpp" />
     <ClCompile Include="cCentro.cpp" />
     <ClCompile Include="cDonante.cpp" />
+    <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="cHelicoptero.cpp" />
     <ClCompile Include="cIncucai.cpp" />
     <ClCompile Include="cOrgano.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="cAvion.h" />
     <ClInclude Include="cCentro.h" />
     <ClInclude Include="cDonante.h" />
+    <ClInclude Include="cFecha.h" />
     <ClInclude Include="cHelicoptero.h" />
     <ClInclude Include="cIncucai.h" />
     <ClInclude Include="cOrgano.h" />

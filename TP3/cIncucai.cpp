@@ -232,6 +232,7 @@ void cIncucai::recibir_paciente(cPaciente* _paciente) {
 	}
 	else{
 		(*ListaReceptor) + (Receptor_Aux);
+		//buscar coincidencia con el receptor
 	}
 }
 void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)

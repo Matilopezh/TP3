@@ -15,7 +15,7 @@ cCentro::cCentro(string _Direccion, string _Nombre, string _Partido, string _Pro
 cCentro::~cCentro(){}
 
 bool cCentro::ablacion(cDonante* Donante){
-
+	
 	/*Tengo que establecer fecha y horario de la ablacion en el organo
 	y llamar al metodo eliminar para eliminar el organo donado de la lista del Donante*/
 }
