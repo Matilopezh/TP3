@@ -63,7 +63,7 @@ template <class t>
 		 ca--;
 	 }
 	 else
-		 (for int i = 0; i < ca - 1; i++)
+	 for(int i = 0; i < ca - 1; i++)
 	 {
 		 if (lista[i] == datoeliminar)
 		 {
@@ -76,7 +76,7 @@ template <class t>
 		 lista[j] = lista[j + 1];
 
 		 ca--;
-	  }
+	 }
  }
  template<class t>
  void cLista<t>::filtrar(t* listadonantes, t* listareceptores)

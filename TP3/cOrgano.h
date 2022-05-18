@@ -4,6 +4,8 @@
 
 
 using namespace std; 
+class cFecha;
+
 class cOrgano
 {
 
