@@ -19,7 +19,7 @@ cCentro::~cCentro(){}
 
 bool cCentro::ablacion(cDonante* Donante){
 	
-	/*Tengo que establecer fecha y horario de la ablacion en el organo
+	/*Tengo que establecer fecha y horario de la ablacion en el organo, no se como darme cuenta que organo va a ser al que se le haga la ablacion 
 	y llamar al metodo eliminar para eliminar el organo donado de la lista del Donante*/
 
 }

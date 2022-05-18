@@ -10,7 +10,7 @@ class cPaciente
 {
 
 public:
-	cPaciente(string _Nombre, string _Sexo, cFecha& _Fecha_nacimiento, string _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud);
+	cPaciente(string _Nombre, string _Sexo, cFecha& _Fecha_nacimiento, unsigned int _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud);
 	virtual ~cPaciente();
 	
 
@@ -20,7 +20,7 @@ protected:
 	cFecha* Fecha_nacimiento;
 	string Nombre;
 	string Sexo;
-	string Telefono;
+	unsigned int Telefono;
 	string Tipo_sangre;
 
 };

@@ -1,8 +1,8 @@
 #include "cOrgano.h"
 #include "cFecha.h"
 
-cOrgano::cOrgano(){
-
+cOrgano::cOrgano(Tipo _Organo){
+	tipo_organo = _Organo;
 }
 
 
@@ -10,6 +10,7 @@ cOrgano::cOrgano(){
 cOrgano::~cOrgano(){
 
 }
-/*cFecha* cOrgano::GetFechaAblacion{
-	return fecha_ablacion;
-}*/
+Tipo cOrgano::GetTipoOrgano()
+{
+	return tipo_organo;
+}

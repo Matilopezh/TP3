@@ -12,17 +12,9 @@ class cDonante;
 
 cIncucai::cIncucai(){
 	 paciente = nullptr;
-	 ListaReceptor = nullptr;
-	 ListaDonante;
-     SubListaReceptores_Corazon= nullptr;
-	 SubListaReceptores_Rinion =nullptr;
-	 SubListaReceptores_Higado =nullptr;
-	 SubListaReceptores_Pancreas= nullptr;
-	 SubListaReceptores_Huesos =nullptr;
-	 SubListaReceptores_Corneas= nullptr;
-	 SubListaReceptores_Pulmones= nullptr;
-	 SubListaReceptores_Intestino =nullptr;
-	 SubListaReceptores_Piel= nullptr;
+	 
+	 ListaDonante; 
+	 
 }
 
 cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas!!!!!!
@@ -30,7 +22,7 @@ cIncucai::~cIncucai(){}//no olvidar hacer el destructor de las listas!!!!!!
 cReceptor* cIncucai::elegir_receptor(cDonante* _donante)
 {
 	//algo huele mal aqui
-	if (SubListaReceptores_Corazon != NULL)
+	if (listaReceptores.SubListaReceptores_Corazon != NULL)
 	{
 		cLista<cReceptor>* SubSublistacorazon = nullptr;
 		for (int i = 0; i < SubListaReceptores_Corazon->GetTam(); i++){
@@ -223,8 +215,8 @@ cReceptor* cIncucai::elegir_receptor(cDonante* _donante)
 	}//creo que ahi funciona	
 }
 
-void cIncucai::recibir_paciente(cPaciente* _paciente) {
-
+void cIncucai::ingresar_paciente(cPaciente* _paciente)
+{
 	cDonante* Donante_Aux = nullptr;
 	Donante_Aux = dynamic_cast<cDonante*>(_paciente);
 
@@ -232,50 +224,89 @@ void cIncucai::recibir_paciente(cPaciente* _paciente) {
 	Receptor_Aux = dynamic_cast<cReceptor*>(_paciente);
 
 
-	if (Donante_Aux != nullptr){
+	if (Donante_Aux != nullptr) {
 		(*ListaDonante) + (Donante_Aux);
-		
+		Buscar_Posibles_Receptores(Donante_Aux);
 	}
-	else if (Receptor_Aux!= nullptr){
-		(*ListaReceptor) + (Receptor_Aux);
-	}
-	else {
-		//error de inscripcion, el paciente no es donante ni receptor
+	else if (Receptor_Aux != nullptr) {
+		(*Lista_Receptor) + (Receptor_Aux);
 	}
 }
-void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
-{
-	for (int i = 0; i < _donante->listaorganos->ca; i++) {
-		for (int j = 0; j < ListaReceptor->GetTam(); j++){
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 0) && ((_donante->listaorganos->lista[i]->tipo_organo) == 0)){
-				(*SubListaReceptores_Corazon) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 1) && ((_donante->listaorganos->lista[i]->tipo_organo) == 1)){
-				(*SubListaReceptores_Rinion) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 2) && ((_donante->listaorganos->lista[i]->tipo_organo) == 2)){
-				(*SubListaReceptores_Pulmones) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 3) && ((_donante->listaorganos->lista[i]->tipo_organo) == 3)){
-				(*SubListaReceptores_Higado) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 4) && ((_donante->listaorganos->lista[i]->tipo_organo) == 4)){
-				(*SubListaReceptores_Pancreas) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 5) && ((_donante->listaorganos->lista[i]->tipo_organo) == 5)){
-				(*SubListaReceptores_Huesos) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 6) && ((_donante->listaorganos->lista[i]->tipo_organo) == 6)){
-				(*SubListaReceptores_Intestino) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 7) && ((_donante->listaorganos->lista[i]->tipo_organo) == 7)){
-				(*SubListaReceptores_Piel) + (ListaReceptor->lista[j]);
-			}
-			if (((ListaReceptor->lista[j]->Organo->tipo_organo) == 8) && ((_donante->listaorganos->lista[i]->tipo_organo) == 8)){
-				(*SubListaReceptores_Corneas) + (ListaReceptor->lista[j]);
-			}
+
+void cIncucai::recibir_paciente(cPaciente* _paciente) {
+	ingresar_paciente(_paciente);
+}
+
+ListaReceptor cIncucai::FiltrarReceptoresPorTipoDeSangre(string _tipo_sangre){
+	int i = 0;
+	ListaReceptor lista_filtrada;
+	while(true){
+		if(i < listaReceptores.SubListaReceptores_Corazon->GetTam() && listaReceptores.SubListaReceptores_Corazon->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Corazon) + (listaReceptores.SubListaReceptores_Corazon->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Rinion->GetTam() && listaReceptores.SubListaReceptores_Rinion->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Rinion) + (listaReceptores.SubListaReceptores_Rinion->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Pulmones->GetTam() && listaReceptores.SubListaReceptores_Pulmones->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Pulmones) + (listaReceptores.SubListaReceptores_Pulmones->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Higado->GetTam() && listaReceptores.SubListaReceptores_Higado->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Higado) + (listaReceptores.SubListaReceptores_Higado->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Pancreas->GetTam() && listaReceptores.SubListaReceptores_Pancreas->lista[i]->Tipo_sangre == _tipo_sangre)	
+			*(lista_filtrada.SubListaReceptores_Pancreas) + (listaReceptores.SubListaReceptores_Pancreas->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Huesos->GetTam() && listaReceptores.SubListaReceptores_Huesos->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Huesos) + (listaReceptores.SubListaReceptores_Huesos->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Intestino->GetTam() && listaReceptores.SubListaReceptores_Intestino->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Intestino) + (listaReceptores.SubListaReceptores_Intestino->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Piel->GetTam() && listaReceptores.SubListaReceptores_Piel->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Piel) + (listaReceptores.SubListaReceptores_Piel->lista[i]);
+		if(i < listaReceptores.SubListaReceptores_Corneas->GetTam() && listaReceptores.SubListaReceptores_Corneas->lista[i]->Tipo_sangre == _tipo_sangre)
+			*(lista_filtrada.SubListaReceptores_Corneas) + (listaReceptores.SubListaReceptores_Corneas->lista[i]);
+		if(i >= listaReceptores.SubListaReceptores_Corazon->GetTam() && i >= listaReceptores.SubListaReceptores_Rinion->GetTam() && i >= listaReceptores.SubListaReceptores_Pulmones->GetTam() &&
+		 i >= listaReceptores.SubListaReceptores_Higado->GetTam() && i >= listaReceptores.SubListaReceptores_Pancreas->GetTam() && i >= listaReceptores.SubListaReceptores_Huesos->GetTam() &&
+		 i >= listaReceptores.SubListaReceptores_Intestino->GetTam() && i >= listaReceptores.SubListaReceptores_Piel->GetTam() && i >= listaReceptores.SubListaReceptores_Corneas->GetTam())
+			break;
+		i++;		
+	}
+	return lista_filtrada;	
+}
+
+ListaReceptor cIncucai::Buscar_Posibles_Receptores(cDonante* _donante){
+
+	/*ListaReceptor lista_filtrada = FiltrarReceptoresPorTipoDeSangre(_donante->Tipo_sangre);
+	for(int i = 0; i < _donante.GetListaOrganos()->GetTam(); i++){
+		//fijate ashee
+	}*/
+	for (int i = 0; i < Lista_Receptor->ca; i++) {
+	
+		switch (Lista_Receptor->lista[i]->GetTipoOrgano()) {
+		case 0://Corazon
+			
+			break;
+		case 1://Rinion
+			
+			break;
+		case 2://Pulmon
+			
+			break;
+		case 3://Higado
+			
+			break;
+		case 4://Pancreas 
+			
+			break;
+		case 5://Hueso
+			
+			break;
+		case 6://Intestino
+			
+			break;
+		case 7://Piel
+			
+			break;
+		case 8://Corneas
+			
+			break;
 		}
-    }
+	}
+	
 }
 void cIncucai::trasporte_transplante(cDonante* _donante, cReceptor* Receptor)
 {

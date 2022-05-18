@@ -10,9 +10,10 @@ class cOrgano
 {
 
 public:
-	cOrgano();
+	cOrgano(Tipo _Organo);
 	virtual ~cOrgano();
 	cFecha* GetFechaAblacion();
+	Tipo GetTipoOrgano();
 
 private:
 	cFecha* fecha_ablacion;

@@ -1,4 +1,4 @@
-#include "cCentro.h"
+//#include "cCentro.h"
 #include <iostream>
 #include <string>
 using namespace std;
