@@ -23,6 +23,6 @@ public:
 	virtual ~cAvion();
 	string to_String();
 	void Imprimir();
-	bool Transporte(cOrgano* Organo, cCentro* Centro);
+	
 
 };

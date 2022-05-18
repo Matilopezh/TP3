@@ -1,7 +1,10 @@
 #include "cCentro.h"
 #include "cPaciente.h"
+#include "cReceptor.h"
+#include "cDonante.h"
 #include <iostream>
 #include <stdlib.h>
+#include <string>
 
 cCentro::cCentro(string _Direccion, string _Nombre, string _Partido, string _Provincia, unsigned int _Telefono)
 {
@@ -18,21 +21,33 @@ bool cCentro::ablacion(cDonante* Donante){
 	
 	/*Tengo que establecer fecha y horario de la ablacion en el organo
 	y llamar al metodo eliminar para eliminar el organo donado de la lista del Donante*/
+
 }
 
-bool cCentro::asignar_vehiculos(cReceptor* Receptor, cDonante* Donante){
+cVehiculo* cCentro::asignar_vehiculos(cReceptor* Receptor, cDonante* Donante){
+	if (strcmp(Donante->Centro_Salud->Provincia, Receptor->Centro_Salud->Provincia) != 0) {
+		cAvion* avion = new cAvion();
+		return avion;
+	}
+	else if (strcmp(Donante->Centro_Salud->Partido, Receptor->Centro_Salud->Partido) != 0) {
+		cHelicoptero* helicoptero = new cHelicoptero();
+		return helicoptero;
+	}
+	else {
+		cAmbulancia* Ambulancia = new cAmbulancia();
+		return Ambulancia;
+	}
+}
+	
 	
 }
 
-void cCentro::transplante() {
-	/*Para realizar el trasplante se verifica
-	que no hayan transcurrido más de 20 horas desde la ablación del órgano y procede a
-	realizar el trasplante.Si el trasplante falla, se cambia la prioridad del paciente receptor a
-	la mayor prioridad y se setea su estado a inestable. Si el trasplante es exitoso o no se
-	define con un random equiprobable.*/
-	int exito = rand() % 2;
-	if (exito) {//equiprobabilidad de que salga tanto 0(false) como 1(true)
+int cCentro::transplante(cReceptor* Receptor, cOrgano* Organo) {
+	if (hora_actual - Organo->GetHoraAblacion() <= 20) { //condicion conceptual, ni idea como comparar fechas (fede no me putees)
 
+		int exito = rand() % 2;
+		return exito;
 	}
+	
 
 }

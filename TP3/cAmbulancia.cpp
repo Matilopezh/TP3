@@ -22,8 +22,3 @@ string cAmbulancia::to_String() {
 	ss << "“La ambulancia llego  a destino" << endl;
 	return ss.str();
 }
-
-bool cAmbulancia::Transporte(cOrgano* Organo, cCentro* Centro){
-
-	return false;
-}

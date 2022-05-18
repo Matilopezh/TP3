@@ -3,6 +3,7 @@
 #include "cDonante.h"
 #include "cPaciente.h"
 #include "lista.h"
+#include "cFecha.h"
 
 #define Tam 10
 
@@ -221,18 +222,25 @@ cReceptor* cIncucai::elegir_receptor(cDonante* _donante)
 		}
 	}//creo que ahi funciona	
 }
+
 void cIncucai::recibir_paciente(cPaciente* _paciente) {
+
 	cDonante* Donante_Aux = nullptr;
 	Donante_Aux = dynamic_cast<cDonante*>(_paciente);
+
 	cReceptor* Receptor_Aux = nullptr;
 	Receptor_Aux = dynamic_cast<cReceptor*>(_paciente);
+
+
 	if (Donante_Aux != nullptr){
 		(*ListaDonante) + (Donante_Aux);
-		Buscar_Posibles_Receptores(Donante_Aux);
+		
 	}
-	else{
+	else if (Receptor_Aux!= nullptr){
 		(*ListaReceptor) + (Receptor_Aux);
-		//buscar coincidencia con el receptor
+	}
+	else {
+		//error de inscripcion, el paciente no es donante ni receptor
 	}
 }
 void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
@@ -269,9 +277,21 @@ void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante)
 		}
     }
 }
-bool cIncucai::trasporte_transplante(cDonante* _donante)
+void cIncucai::trasporte_transplante(cDonante* _donante, cReceptor* Receptor)
 {
-	return false;
+	cVehiculo* vehiculo = _donante->Centro_Salud->asignar_vehiculos(Receptor, _donante);
+	_donante->Centro_Salud->ablacion(_donante);
+	vehiculo->Imprimir();
+	int exito=_donante->Centro_Salud->transplante( Receptor, Receptor->Organo);
+	if (exito == 0) {
+		Receptor->estadoreceptor = 0;
+		Receptor->prioridad = 1;
+		}
+	if (exito == 1) {
+		//eliminar Receptor de la lista
+	}
+
+	
 }
 
 

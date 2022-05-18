@@ -10,3 +10,6 @@ cOrgano::cOrgano(){
 cOrgano::~cOrgano(){
 
 }
+cFecha* cOrgano::GetFechaAblacion{
+	return fecha_ablacion;
+}

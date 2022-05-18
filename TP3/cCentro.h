@@ -1,10 +1,12 @@
 #include <iostream>
 #include <string>
 #include "lista.h"
+#include "cVehiculo.h"
 
 using namespace std;
 
 class cDonante;
+class cReceptor;
 
 
 class cCentro
@@ -15,12 +17,13 @@ class cCentro
 		virtual ~cCentro();
 
 		bool ablacion(cDonante* Donante);
-		bool asignar_vehiculos(cDonante* Donante);
-		void transplante();
+		cVehiculo* asignar_vehiculos(cReceptor* Receptor,cDonante* Donante);
+		int transplante(cReceptor* Receptor, cOrgano* Organo);
 
 	private:
-		//cLista<cVehiculos>* listavehiculos;
+		cLista<cVehiculo>* listavehiculos;
 		friend class cReceptor;
+		friend class cDonante;
 		string Direccion;
 		string Nombre;
 		string Partido;

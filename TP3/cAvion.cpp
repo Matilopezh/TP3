@@ -26,10 +26,7 @@ string cAvion::to_String() {
 	return ss.str();
 }
 
-bool cAvion::Transporte(cOrgano* Organo, cCentro* Centro){
 
-	return false;
-}
 
 
 

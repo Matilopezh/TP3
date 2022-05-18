@@ -26,7 +26,3 @@ string cHelicoptero::to_String() {
 	return ss.str();
 }
 
-bool cHelicoptero::Transporte(cOrgano* Organo, cCentro* Centro){
-
-	return false;
-}

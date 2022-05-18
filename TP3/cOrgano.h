@@ -2,6 +2,7 @@
 #include <string>
 #include "Enum.h"
 
+
 using namespace std; 
 class cOrgano
 {
@@ -9,6 +10,7 @@ class cOrgano
 public:
 	cOrgano();
 	virtual ~cOrgano();
+	cFecha* GetFechaAblacion();
 
 private:
 	cFecha* fecha_ablacion;

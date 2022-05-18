@@ -27,7 +27,3 @@ void cVehiculo::Imprimir(){
 }
 
 
-bool cVehiculo::Transporte(cOrgano Organo, cCentro Centro){
-
-	return false;
-}
