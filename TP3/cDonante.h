@@ -7,12 +7,13 @@
 
 using namespace std;
 class cFecha;
+class cCentro;
 
 class cDonante : public cPaciente
 {
 	friend class cCentro;
 public:
-	cDonante(string _Nombre, string _Sexo, cFecha& _Fecha_nacimiento, unsigned int _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud, cFecha& _fecha_hora_muerte, clista<cOrgano>& _listaorganos);
+	cDonante(string _Nombre, string _Sexo, cFecha& _Fecha_nacimiento, unsigned int _Telefono, string _Tipo_sangre, cCentro& _Centro_Salud, cFecha& _fecha_hora_muerte, cLista<cOrgano>& _listaorganos);
 	virtual ~cDonante();
 	cLista<cOrgano>GetListaOrgano();//revisar
 

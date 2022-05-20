@@ -182,7 +182,7 @@ void cIncucai::Buscar_Posibles_Receptores(cDonante* _donante){
 	for (int i = 0; i < Lista_Receptores->ca; i++) {
 		if (Lista_Receptores->lista[i]->Tipo_sangre == _donante->Tipo_sangre) {
 			for (int j = 0; j < _donante->lista_organos->ca;j++) {
-				if (Lista_Receptores->lista[i]->GetTipoOrgano() == _donante->lista_organos->lista[i]->GetTipoOrgano()) {
+				if (Lista_Receptores->lista[i]->GetTipoOrgano() == _donante->lista_organos->lista[j]->GetTipoOrgano()) {
 					switch (Lista_Receptores->lista[i]->GetTipoOrgano()) {
 					case 0://Corazon
 						(*listaReceptores.SubListaReceptores_Corazon) + (Lista_Receptores->lista[i]);
