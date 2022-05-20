@@ -18,7 +18,7 @@ class cCentro
 
 		bool ablacion(cDonante* Donante);
 		cVehiculo* asignar_vehiculos(cReceptor* Receptor,cDonante* Donante);
-		int transplante(cReceptor* Receptor, cOrgano* Organo);
+		int transplante(cReceptor* Receptor);
 
 	private:
 		cLista<cVehiculo>* listavehiculos;

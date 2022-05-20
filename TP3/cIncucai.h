@@ -9,7 +9,7 @@ class cDonante;
 class cPaciente;
 class cCentro;
 
-struct ListaReceptor{
+struct SubListas{
 	cLista<cReceptor>* SubListaReceptores_Corazon = nullptr;
 	cLista<cReceptor>* SubListaReceptores_Pancreas = nullptr;
 	cLista<cReceptor>* SubListaReceptores_Huesos = nullptr;
@@ -19,6 +19,7 @@ struct ListaReceptor{
 	cLista<cReceptor>* SubListaReceptores_Corneas = nullptr;
 	cLista<cReceptor>* SubListaReceptores_Higado = nullptr;
 	cLista<cReceptor>* SubListaReceptores_Piel = nullptr;
+	cLista<cReceptor>* SubListaReceptores_Compatibles = nullptr;
 };
 class cIncucai
 {
@@ -30,17 +31,16 @@ public:
 	
 	void recibir_paciente(cPaciente*_paciente);
 	void trasporte_transplante(cDonante* _donante,cReceptor* Receptor);
-	
+	void ingresar_paciente(cPaciente* _paciente);
 	void Buscar_Posibles_Receptores(cDonante* _donante);
-	cReceptor* elegir_receptor (cDonante* _donante);
+	void elegir_receptor (cDonante* _donante);
 	
 private:
-	ListaReceptor FiltrarReceptoresPorTipoDeSangre(string _tipo_sangre);
-	void ingresar_paciente(cPaciente* _paciente);
+	
 	cPaciente* paciente;
-	cLista<cDonante>* ListaDonante;
+	cLista<cDonante>* ListaDonantes;
 	cLista<cCentro>* ListaCentros;
-	cLista<cReceptor>* Lista_Receptor;
-	ListaReceptor 	listaReceptores;//Capaz cambiar nombre
+	cLista<cReceptor>* Lista_Receptores;
+	SubListas listaReceptores;//Capaz cambiar nombre
 };
 

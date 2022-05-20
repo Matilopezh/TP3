@@ -21,5 +21,6 @@ private:
 	int Prioridad;
 	
 	friend class cIncucai;
+	friend class cCentro;
 };
 
