@@ -19,3 +19,8 @@ int cReceptor::GetTipoOrgano()
 {
 	return Organo->GetTipoOrgano();
 }
+
+cOrgano* cReceptor::GetOrgano()
+{
+	return Organo;
+}

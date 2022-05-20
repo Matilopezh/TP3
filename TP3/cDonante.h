@@ -18,7 +18,6 @@ public:
 
 private:
 	cLista<cOrgano>* lista_organos;
-	cFecha* fecha_hora_ablacion;
 	cFecha* fecha_hora_muerte;
 	friend class cIncucai;
 };

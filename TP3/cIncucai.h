@@ -33,7 +33,7 @@ public:
 	void trasporte_transplante(cDonante* _donante,cReceptor* Receptor);
 	void ingresar_paciente(cPaciente* _paciente);
 	void Buscar_Posibles_Receptores(cDonante* _donante);
-	void elegir_receptor (cDonante* _donante);
+	void elegir_receptor ();
 	
 private:
 	

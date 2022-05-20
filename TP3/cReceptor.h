@@ -13,14 +13,16 @@ public:
 	virtual ~cReceptor();
 	Estado GetEstado();
 	int GetTipoOrgano();
+	cOrgano* GetOrgano();
 private:
+	friend class cIncucai;
+	friend class cCentro;
     Estado estadoreceptor;
 	cOrgano* Organo;
 	cFecha* Fecha_espera;
 	string Patologia;
 	int Prioridad;
 	
-	friend class cIncucai;
-	friend class cCentro;
+	
 };
 

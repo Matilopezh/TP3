@@ -16,6 +16,7 @@ public:
 	Tipo GetTipoOrgano();
 
 private:
+	friend class cCentro;
 	cFecha* fecha_ablacion;
 	Tipo tipo_organo;
 	friend class cIncucai;
